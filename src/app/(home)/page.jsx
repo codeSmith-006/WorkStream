@@ -1,0 +1,19 @@
+import React from "react";
+
+// here we'll have the content of the home page
+export default function HomePage() {
+  return (
+    <div>
+      {/* hero section */}
+      <div></div>
+      {/* Everything you need to succeed */}
+      <div></div>
+      {/* Perfect for every team */}
+      <div></div>
+      {/* Loved by teams worldwide */}
+      <div></div>
+      {/* Ready to transform the way your team works? */}
+      <div></div>
+    </div>
+  );
+}
