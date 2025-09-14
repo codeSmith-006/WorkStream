@@ -1,4 +1,5 @@
 import React from "react";
+import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/ReadyToTransform";
 
 // here we'll have the content of the home page
 export default function HomePage() {
@@ -13,7 +14,9 @@ export default function HomePage() {
       {/* Loved by teams worldwide */}
       <div></div>
       {/* Ready to transform the way your team works? */}
-      <div></div>
+      <div>
+        <ReadyToTransform></ReadyToTransform>
+      </div>
     </div>
   );
 }
