@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+
+
 // import { Button } from './ui/button';
 // import { Card, CardContent } from './ui/card';
 
@@ -121,27 +123,39 @@ export function Testimonials() {
                     </div>
 
                     {/* Navigation Buttons */}
+
+
                     <button
+
                         variant="outline"
                         size="icon"
                         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-card shadow-lg border border-border"
                         onClick={prevTestimonial}
                     >
                         <ChevronLeft className="w-4 h-4" />
+
+
                     </button>
                     <button
+
                         variant="outline"
                         size="icon"
                         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-card shadow-lg border border-border"
                         onClick={nextTestimonial}
                     >
                         <ChevronRight className="w-4 h-4" />
+
+
                     </button>
+
 
                     {/* Dots Indicator */}
                     <div className="flex justify-center mt-6 space-x-2">
                         {testimonials.map((_, index) => (
+
+
                             <button
+
                                 key={index}
                                 className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-primary' : 'bg-muted'
                                     }`}
