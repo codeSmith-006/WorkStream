@@ -1,6 +1,6 @@
 import React from "react";
 import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/ReadyToTransform";
-import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
+
 
 // here we'll have the content of the home page
 export default function HomePage() {
