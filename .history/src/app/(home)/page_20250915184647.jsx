@@ -2,7 +2,6 @@
 import React from "react";
 import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/ReadyToTransform";
 import { Hero } from "../Components/(home_page)/Hero/Hero";
-import UseCases from "../Components/(home_page)/UseCases/UseCases";
 // import Hero from "../Components/(home_page)/Hero/Hero";
 
 // here we'll have the content of the home page

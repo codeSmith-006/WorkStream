@@ -13,7 +13,7 @@ export default function HomePage() {
       <div><Hero></Hero></div>
       {/* Everything you need to succeed */}
       <div></div>
-      {/* Perfect for every team */}
+      {/*  */}
       <div>
         <UseCases></UseCases>
       </div>
