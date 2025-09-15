@@ -3,6 +3,8 @@ import React from "react";
 import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/ReadyToTransform";
 import { Hero } from "../Components/(home_page)/Hero/Hero";
 import UseCases from "../Components/(home_page)/UseCases/UseCases";
+import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
+import { Testimonials } from "../Components/Testimonials/Testimonials";
 // import Hero from "../Components/(home_page)/Hero/Hero";
 
 
@@ -14,14 +16,16 @@ export default function HomePage() {
       <div><Hero></Hero></div>
       {/* Everything you need to succeed */}
       <div>
-        <NeedToSucceed/>
+        <NeedToSucceed />
       </div>
       {/* Perfect for every team */}
       <div>
         <UseCases></UseCases>
       </div>
       {/* Loved by teams worldwide */}
-      <div></div>
+      <div>
+        <Testimonials></Testimonials>
+      </div>
       {/* Ready to transform the way your team works? */}
       <div>
         <ReadyToTransform></ReadyToTransform>
