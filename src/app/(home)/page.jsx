@@ -5,6 +5,7 @@ import { Hero } from "../Components/(home_page)/Hero/Hero";
 import UseCases from "../Components/(home_page)/UseCases/UseCases";
 // import Hero from "../Components/(home_page)/Hero/Hero";
 
+
 // here we'll have the content of the home page
 export default function HomePage() {
   return (
@@ -12,7 +13,9 @@ export default function HomePage() {
       {/* hero section */}
       <div><Hero></Hero></div>
       {/* Everything you need to succeed */}
-      <div></div>
+      <div>
+        <NeedToSucceed/>
+      </div>
       {/* Perfect for every team */}
       <div>
         <UseCases></UseCases>
