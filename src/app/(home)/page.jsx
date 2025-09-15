@@ -1,5 +1,6 @@
 import React from "react";
 import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/ReadyToTransform";
+import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
 
 // here we'll have the content of the home page
 export default function HomePage() {
@@ -8,7 +9,9 @@ export default function HomePage() {
       {/* hero section */}
       <div></div>
       {/* Everything you need to succeed */}
-      <div></div>
+      <div>
+        <NeedToSucceed/>
+      </div>
       {/* Perfect for every team */}
       <div></div>
       {/* Loved by teams worldwide */}
