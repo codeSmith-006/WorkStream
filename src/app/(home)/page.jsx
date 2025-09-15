@@ -3,8 +3,8 @@ import React from "react";
 import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/ReadyToTransform";
 import { Hero } from "../Components/(home_page)/Hero/Hero";
 import UseCases from "../Components/(home_page)/UseCases/UseCases";
-import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
-import { Testimonials } from "../Components/Testimonials/Testimonials";
+import NeedToSucceed from "../Components/(home_page)/NeedToSucceed/NeedToSucceed";
+import { Testimonials } from "../Components/(home_page)/Testimonials/Testimonials";
 // import Hero from "../Components/(home_page)/Hero/Hero";
 
 
