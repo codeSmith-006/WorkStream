@@ -72,12 +72,14 @@ export default function Navbar() {
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
+
+            <Link href="/login">
             <Button
               variant="ghost"
               className="text-foreground hover:text-primary"
             >
               Login
-            </Button>
+            </Button></Link>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
               Sign Up
             </Button>
@@ -129,9 +131,11 @@ export default function Navbar() {
                   <span className="text-sm text-muted-foreground">Theme</span>
                   <ThemeToggle />
                 </div>
+                <Link href="/login">
                 <Button variant="ghost" className="w-full">
                   Login
                 </Button>
+                </Link>
                 <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                   Sign Up
                 </Button>
