@@ -5,35 +5,26 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext(undefined);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("workstream-theme") || "light"
-  );
-
-  useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem("workstream-theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else if (prefersDark) {
-      setTheme("dark");
+  // Initialize theme safely (SSR won't crash)
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined" && window.__theme) {
+      return window.__theme; // 👈 preload from inline script
     }
-  }, []);
+    return "light"; // fallback during SSR
+  });
 
   useEffect(() => {
-    // Apply theme to document
+    // Sync theme with <html> class and localStorage
     const root = document.documentElement;
+
     if (theme === "dark") {
       root.classList.add("dark");
     } else {
       root.classList.remove("dark");
     }
 
-    // Save theme preference
     localStorage.setItem("workstream-theme", theme);
+    window.__theme = theme; // keep global in sync
   }, [theme]);
 
   const toggleTheme = () => {

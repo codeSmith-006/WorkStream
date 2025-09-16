@@ -20,7 +20,28 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        (function() {
+          try {
+            var savedTheme = localStorage.getItem("workstream-theme");
+            var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var theme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
+            window.__theme = theme; // 👈 make it globally available
+            if (theme === "dark") {
+              document.documentElement.classList.add("dark");
+            } else {
+              document.documentElement.classList.remove("dark");
+            }
+          } catch (_) {}
+        })();
+      `,
+          }}
+        />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
