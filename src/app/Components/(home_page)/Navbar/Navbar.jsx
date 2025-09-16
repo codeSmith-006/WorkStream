@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X, Waves } from "lucide-react";
-import { ThemeToggle } from "@/app/Provider/ThemeToggle";
+import { ThemeToggle } from "../../../Provider/ThemeToggle";
 import Button from "../UI/Button";
 
 export default function Navbar() {
