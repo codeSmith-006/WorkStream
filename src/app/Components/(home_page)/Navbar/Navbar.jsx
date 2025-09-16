@@ -61,12 +61,12 @@ export default function Navbar() {
             >
               Solutions
             </Link>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="text-foreground hover:text-primary transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -118,12 +118,12 @@ export default function Navbar() {
               >
                 Solutions
               </Link>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="block px-3 py-2 text-foreground hover:text-primary"
               >
                 Contact
-              </a>
+              </Link>
               <div className="pt-4 border-t border-border flex flex-col space-y-2">
                 <div className="flex items-center justify-between px-3 py-2">
                   <span className="text-sm text-muted-foreground">Theme</span>
