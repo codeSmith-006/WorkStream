@@ -4,6 +4,7 @@ import { ReadyToTransform } from "../Components/(home_page)/ReadyToTransform/Rea
 import { Hero } from "../Components/(home_page)/Hero/Hero";
 import UseCases from "../Components/(home_page)/UseCases/UseCases";
 import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
+import Contact from "../Components/(home_page)/Contact/Contact";
 
 // here we'll have the content of the home page
 export default function HomePage() {
@@ -26,6 +27,10 @@ export default function HomePage() {
       {/* Ready to transform the way your team works? */}
       <div>
         <ReadyToTransform></ReadyToTransform>
+      </div>
+      {/* contact section  */}
+      <div>
+        <Contact></Contact>
       </div>
     </div>
   );
