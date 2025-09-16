@@ -5,6 +5,7 @@ import { Hero } from "../Components/(home_page)/Hero/Hero";
 import UseCases from "../Components/(home_page)/UseCases/UseCases";
 import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
 import Contact from "../Components/(home_page)/Contact/Contact";
+import { Pricing } from "../Components/(home_page)/Pricing/Pricing";
 
 // here we'll have the content of the home page
 export default function HomePage() {
@@ -24,6 +25,8 @@ export default function HomePage() {
       </div>
       {/* Loved by teams worldwide */}
       <div></div>
+      {/* pricing */}
+      <div><Pricing></Pricing></div>
       {/* Ready to transform the way your team works? */}
       <div>
         <ReadyToTransform></ReadyToTransform>
