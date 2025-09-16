@@ -5,7 +5,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext(undefined);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("workstream-theme") || "light"
+  );
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
