@@ -6,6 +6,7 @@ import UseCases from "../Components/(home_page)/UseCases/UseCases";
 import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
 import Contact from "../Components/(home_page)/Contact/Contact";
 import { Pricing } from "../Components/(home_page)/Pricing/Pricing";
+import { Testimonials } from "../Components/(home_page)/Testimonials/Testimonials";
 
 // here we'll have the content of the home page
 export default function HomePage() {
@@ -24,7 +25,9 @@ export default function HomePage() {
         <UseCases></UseCases>
       </div>
       {/* Loved by teams worldwide */}
-      <div></div>
+      <div>
+        <Testimonials></Testimonials>
+      </div>
       {/* pricing */}
       <div><Pricing></Pricing></div>
       {/* Ready to transform the way your team works? */}
