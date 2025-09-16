@@ -1,5 +1,6 @@
-import { Waves, Linkedin, Github, Mail } from "lucide-react";
+
 import { FaXTwitter } from "react-icons/fa6";
+import { Waves, Linkedin, Github, Mail } from "lucide-react";
 const footerLinks = {
   product: [
     { name: "Features", href: "#features" },
@@ -12,7 +13,7 @@ const footerLinks = {
     { name: "About", href: "#about" },
     { name: "Blog", href: "#" },
     { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Solutions", href: "#solutions" },
     { name: "Partners", href: "#" },
   ],
   resources: [
