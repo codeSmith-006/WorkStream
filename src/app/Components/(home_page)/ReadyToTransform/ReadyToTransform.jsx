@@ -33,13 +33,13 @@ export function ReadyToTransform() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-white text-black hover:bg-white/90 px-8 py-6 text-lg font-semibold group shadow-lg"
+            <button
+              
+              className="bg-white flex items-center lg:h-18 h-18 px-3  rounded text-black hover:bg-white/90 lg:px-8 lg:py-6 text-lg font-semibold group shadow-lg"
             >
               Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </button>
             <Button
               variant="outline"
               size="lg"
