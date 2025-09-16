@@ -45,7 +45,6 @@ export function Hero() {
                 <div className="text-lg font-semibold text-foreground">TechCorp</div>
                 <div className="text-lg font-semibold text-foreground">StartupXYZ</div>
                 <div className="text-lg font-semibold text-foreground">UniverCity</div>
-                <div className="text-lg font-semibold text-foreground">AgencyPro</div>
               </div>
             </div>
           </div>
