@@ -30,15 +30,9 @@ export default function HomePage() {
       <div>
         <UseCases></UseCases>
       </div>
-      {/* Loved by teams worldwide */}
-      <div></div>
       {/* FAQ section */}
       <div>
         <FAQ/>
-      </div>
-    
-      <div>
-        <Testimonials></Testimonials>
       </div>
       {/* pricing */}
       <div><Pricing></Pricing></div>
