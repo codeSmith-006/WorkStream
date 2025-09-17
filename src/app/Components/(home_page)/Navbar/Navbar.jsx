@@ -81,9 +81,11 @@ export default function Navbar() {
                 Login
               </Button>
             </Link>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Sign Up
-            </Button>
+            <Link href="/register">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Sign Up
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -137,9 +139,11 @@ export default function Navbar() {
                     Login
                   </Button>
                 </Link>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Sign Up
-                </Button>
+                <Link href="/register">
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
