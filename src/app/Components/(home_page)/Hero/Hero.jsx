@@ -2,10 +2,18 @@
 import Button from "../UI/Button";
 import { PlayCircle, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
+import { StarsBackground } from "../Animate-Ui/StarsBackground";
 
 export function Hero() {
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-background via-background to-muted/30 dark:to-muted/20">
+    <section className="relative  pb-12 md:pt-32 md:pb-20">
+  {/* Stars Background */}
+  <StarsBackground
+    
+    className="absolute inset-0 z-0"
+  />
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className=" pb-12  md:pb-20  ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
@@ -45,7 +53,6 @@ export function Hero() {
                 <div className="text-lg font-semibold text-foreground">TechCorp</div>
                 <div className="text-lg font-semibold text-foreground">StartupXYZ</div>
                 <div className="text-lg font-semibold text-foreground">UniverCity</div>
-                <div className="text-lg font-semibold text-foreground">AgencyPro</div>
               </div>
             </div>
           </div>
@@ -81,5 +88,7 @@ export function Hero() {
         </div>
       </div>
     </section>
+     </div>
+</section>
   );
 }
