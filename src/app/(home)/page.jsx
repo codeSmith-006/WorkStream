@@ -14,7 +14,6 @@ import ScrollToTopButton from "../Components/(home_page)/ScrollBottomToTop/Scrol
 import Contact from "../Components/(home_page)/Contact/Contact";
 import FaqSection from "../Components/(home_page)/FAQ/FaqSection";
 
-
 // here we'll have the content of the home page
 export default function HomePage() {
   return (
@@ -33,18 +32,16 @@ export default function HomePage() {
       </div>
       {/* FAQ section */}
       <div>
-        <FaqSection/>
-      {/* {/* </div> */}
-    
-        {/* <FaqSection /> */}
+        <FaqSection />
       </div>
 
       <div>
         <Testimonials></Testimonials>
-        <FAQ/>
       </div>
       {/* pricing */}
-      <div><Pricing></Pricing></div>
+      <div>
+        <Pricing></Pricing>
+      </div>
       {/* Ready to transform the way your team works? */}
       <div>
         <ReadyToTransform></ReadyToTransform>
@@ -52,7 +49,7 @@ export default function HomePage() {
       {/* Back to top scroll component */}
       <div>
         <ScrollToTopButton />
-        </div>
+      </div>
       {/* Loved by teams worldwide */}
       <div>
         <Testimonials></Testimonials>
@@ -61,9 +58,6 @@ export default function HomePage() {
       <div>
         <Contact></Contact>
       </div>
-      {/* Scroll back to top */}
-      {/* <ScrollToTopButton/> */}
     </div>
   );
 }
-
