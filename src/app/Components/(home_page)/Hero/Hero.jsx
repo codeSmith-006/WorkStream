@@ -19,50 +19,105 @@ export function Hero() {
     "ByteMasters",
     "CodeCrafters"
   ];
+
   return (
-    <section className="relative min-h-screen py-22 md:pt-36 md:pb-20 overflow-hidden">
+    <section className="relative w-full flex items-center justify-center overflow-hidden">
+      {/* Stars Background */}
       <StarsBackground className="absolute inset-0 z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto py-22   px-4 sm:px-6 lg:px-8 w-full">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.3 } }
+          }}
+        >
           {/* Left Side */}
-          <div className="space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Streamline Your Work. <span className="text-primary">Empower Your Team.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mt-4">
-              WorkStream helps teams plan, track, and collaborate on projects efficiently...
-            </p>
+          <div className="flex flex-col justify-center space-y-8 md:text-center lg:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight lg:text-left"
+            >
+              Streamline Your Work.{" "}
+              <span className="text-primary">Empower Your Team.</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 md:text-center lg:text-left"
+            >
+              WorkStream helps teams plan, track, and collaborate on projects efficiently with task management, timelines, and real-time communication.
+            </motion.p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-primary-foreground px-8 py-6 text-lg">
-                Get Started Free
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-primary text-primary px-8 py-6 text-lg flex items-center">
-                <PlayCircle className="mr-2 w-5 h-5" /> Book a Demo
-              </Button>
-            </div>
-
-            {/* Marquee */}
-            <div className="overflow-hidden w-full mt-8">
-              <motion.div
-                className="flex gap-12 whitespace-nowrap"
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{
-                  x: { repeat: Infinity, repeatType: "loop", duration: 20, ease: "linear" }
-                }}
-              >
-                {trustCompanies.concat(trustCompanies).map((name, i) => (
-                  <div key={i} className="text-lg font-semibold text-foreground">{name}</div>
-                ))}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button size="lg" className="bg-primary text-primary-foreground px-8 py-6 text-lg flex items-center justify-center">
+                  Get Started Free
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </motion.div>
-            </div>
+
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="outline" size="lg" className="border-2 border-primary text-primary px-8 py-6 text-lg flex items-center justify-center">
+                  <PlayCircle className="mr-2 w-5 h-5" />
+                  Book a Demo
+                </Button>
+              </motion.div>
+            </motion.div>
+
+            {/* Marquee / Trust Companies */}
+            <motion.div
+              className="overflow-hidden w-full mt-8"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+            >
+              <p className="text-sm text-muted-foreground mb-4 text-center lg:text-left">
+                Trusted by teams at:
+              </p>
+
+              <div className="overflow-hidden relative w-full">
+                <motion.div
+                  className="flex gap-12 whitespace-nowrap"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{
+                    x: {
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      duration: 20,
+                      ease: "linear"
+                    }
+                  }}
+                >
+                  {trustCompanies.concat(trustCompanies).map((name, i) => (
+                    <div key={i} className="text-lg font-semibold text-foreground">
+                      {name}
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
 
           {/* Right Side */}
-          <div className="relative">
+          <div className="flex justify-center lg:justify-end relative">
             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
               whileHover={{ scale: 1.02, rotate: 0.5 }}
               className="relative bg-card rounded-2xl shadow-2xl p-4 border border-border"
             >
@@ -102,9 +157,8 @@ export function Hero() {
               📊 Real-time Analytics
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
-
   );
 }
