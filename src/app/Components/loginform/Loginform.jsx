@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import "particles.js";
+// import "particles.js";
 import Lottie from "lottie-react";
 import rocketAnim from "../../../assets/signin.json";
 import "./LoginForm.css";

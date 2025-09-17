@@ -8,11 +8,19 @@ import NeedToSucceed from "../Components/(home_page)/NeedToSucceed/NeedToSucceed
 // import FAQ from "../Components/(home_page)/FAQ/FaqSection";
 
 // import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
-import Contact from "../Components/(home_page)/Contact/Contact";
+// import Contact from "../Components/(home_page)/Contact/Contact";
 import { Pricing } from "../Components/(home_page)/Pricing/Pricing";
 import { Testimonials } from "../Components/(home_page)/Testimonials/Testimonials";
-import FAQ from "../Components/(home_page)/FAQ/FAQSection";
-import ScrollToTopButton from "../Components/(home_page)/ScrollBackToTop/ScrollBackToTop";
+// import FAQ from "../Components/(home_page)/FAQ/FAQSection";
+// import ScrollToTopButton from "../Components/(home_page)/ScrollBackToTop/ScrollBackToTop";
+// import NeedToSucceed from "../Components/(home_page)/NeedToSucceed/NeedToSucceed";
+import ScrollToTopButton from "../Components/(home_page)/ScrollBottomToTop/ScrollToTopButton";
+// import FaqSection from "../Components/(home_page)/FAQ/FaqSection";
+// import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
+import Contact from "../Components/(home_page)/Contact/Contact";
+import FaqSection from "../Components/(home_page)/FAQ/FaqSection";
+// import { Pricing } from "../Components/(home_page)/Pricing/Pricing";
+// import { Testimonials } from "../Components/(home_page)/Testimonials/Testimonials";
 
 // here we'll have the content of the home page
 export default function HomePage() {
@@ -34,9 +42,12 @@ export default function HomePage() {
       <div></div>
       {/* FAQ section */}
       <div>
-        <FAQ/>
-      </div>
+        <FaqSection/>
+      {/* {/* </div> */}
     
+        {/* <FaqSection /> */}
+      </div>
+
       <div>
         <Testimonials></Testimonials>
       </div>
@@ -46,12 +57,17 @@ export default function HomePage() {
       <div>
         <ReadyToTransform></ReadyToTransform>
       </div>
+      {/* Back to top scroll component */}
+      <div>
+        <ScrollToTopButton />
+        </div>
       {/* contact section  */}
       <div>
         <Contact></Contact>
       </div>
       {/* Scroll back to top */}
-      <ScrollToTopButton/>
+      {/* <ScrollToTopButton/> */}
     </div>
   );
 }
+
