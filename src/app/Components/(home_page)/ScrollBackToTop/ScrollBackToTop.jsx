@@ -1,9 +1,8 @@
 "use client";
 import { ArrowUpFromDot } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export default function ScrollToTopButton() {
-  const bannerRef = useRef(null);
   const [showUp, setShowUp] = useState(false);
 
   useEffect(() => {
