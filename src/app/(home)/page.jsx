@@ -31,8 +31,6 @@ export default function HomePage() {
       <div>
         <UseCases></UseCases>
       </div>
-      {/* Loved by teams worldwide */}
-      <div></div>
       {/* FAQ section */}
       <div>
         <FaqSection/>
@@ -43,6 +41,7 @@ export default function HomePage() {
 
       <div>
         <Testimonials></Testimonials>
+        <FAQ/>
       </div>
       {/* pricing */}
       <div><Pricing></Pricing></div>
@@ -54,6 +53,10 @@ export default function HomePage() {
       <div>
         <ScrollToTopButton />
         </div>
+      {/* Loved by teams worldwide */}
+      <div>
+        <Testimonials></Testimonials>
+      </div>
       {/* contact section  */}
       <div>
         <Contact></Contact>
