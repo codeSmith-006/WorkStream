@@ -1,13 +1,25 @@
+"use client";
 import { Sun, Moon } from "lucide-react";
 
 import { useTheme } from "./ThemeProvider";
 import Button from "../Components/(home_page)/UI/Button";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // 🚫 Don't render until mounted
+  }
 
   return (
     <Button
+      suppressHydrationWarning
       variant="ghost"
       size="icon"
       onClick={toggleTheme}

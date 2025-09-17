@@ -1,5 +1,6 @@
-import { Waves, Twitter, Linkedin, Github, Mail } from "lucide-react";
 
+import { FaXTwitter } from "react-icons/fa6";
+import { Waves, Linkedin, Github, Mail } from "lucide-react";
 const footerLinks = {
   product: [
     { name: "Features", href: "#features" },
@@ -12,7 +13,7 @@ const footerLinks = {
     { name: "About", href: "#about" },
     { name: "Blog", href: "#" },
     { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
+    { name: "Solutions", href: "#solutions" },
     { name: "Partners", href: "#" },
   ],
   resources: [
@@ -32,7 +33,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: "Twitter", icon: Twitter, href: "#" },
+  { name: "X", icon: FaXTwitter , href: "#" },
   { name: "LinkedIn", icon: Linkedin, href: "#" },
   { name: "GitHub", icon: Github, href: "#" },
   { name: "Email", icon: Mail, href: "mailto:hello@workstream.com" },
@@ -146,11 +147,7 @@ export function Footer() {
             <p className="text-muted-foreground text-sm">
               © 2025 WorkStream. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <span className="text-sm text-muted-foreground">
-                Built with ❤️ for productive teams
-              </span>
-            </div>
+            
           </div>
         </div>
       </div>
