@@ -25,7 +25,7 @@ export default function ScrollToTopButton() {
     return (
         <button
             onClick={scrollTop}
-            className={`fixed right-6 bottom-8 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#1e40af] shadow-xl text-white transition-all duration-300 ${showUp ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`fixed right-6 bottom-8 z-50 flex items-center justify-center cursor-pointer w-14 h-14 rounded-full bg-[#1e40af] shadow-xl text-white transition-all duration-300 ${showUp ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
         >
            <ArrowUpFromDot />

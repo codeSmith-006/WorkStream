@@ -5,22 +5,15 @@ import { Hero } from "../Components/(home_page)/Hero/Hero";
 import UseCases from "../Components/(home_page)/UseCases/UseCases";
 // import Hero from "../Components/(home_page)/Hero/Hero";
 import NeedToSucceed from "../Components/(home_page)/NeedToSucceed/NeedToSucceed";
-// import FAQ from "../Components/(home_page)/FAQ/FaqSection";
 
-// import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
-// import Contact from "../Components/(home_page)/Contact/Contact";
 import { Pricing } from "../Components/(home_page)/Pricing/Pricing";
 import { Testimonials } from "../Components/(home_page)/Testimonials/Testimonials";
-// import FAQ from "../Components/(home_page)/FAQ/FAQSection";
-// import ScrollToTopButton from "../Components/(home_page)/ScrollBackToTop/ScrollBackToTop";
-// import NeedToSucceed from "../Components/(home_page)/NeedToSucceed/NeedToSucceed";
+
 import ScrollToTopButton from "../Components/(home_page)/ScrollBottomToTop/ScrollToTopButton";
-// import FaqSection from "../Components/(home_page)/FAQ/FaqSection";
-// import NeedToSucceed from "../Components/NeedToSucceed/NeedToSucceed";
+
 import Contact from "../Components/(home_page)/Contact/Contact";
 import FaqSection from "../Components/(home_page)/FAQ/FaqSection";
-// import { Pricing } from "../Components/(home_page)/Pricing/Pricing";
-// import { Testimonials } from "../Components/(home_page)/Testimonials/Testimonials";
+
 
 // here we'll have the content of the home page
 export default function HomePage() {
