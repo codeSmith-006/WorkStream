@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.0.2",
+    "antd": "^5.27.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "lottie-react": "^2.4.1",
