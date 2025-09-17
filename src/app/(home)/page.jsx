@@ -24,15 +24,15 @@ export default function HomePage() {
       <div>
         <UseCases></UseCases>
       </div>
-      {/* Loved by teams worldwide */}
-      <div>
-        <Testimonials></Testimonials>
-      </div>
       {/* pricing */}
       <div><Pricing></Pricing></div>
       {/* Ready to transform the way your team works? */}
       <div>
         <ReadyToTransform></ReadyToTransform>
+      </div>
+      {/* Loved by teams worldwide */}
+      <div>
+        <Testimonials></Testimonials>
       </div>
       {/* contact section  */}
       <div>

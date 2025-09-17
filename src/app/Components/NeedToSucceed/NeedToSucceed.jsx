@@ -65,7 +65,7 @@ export default function NeedToSucceed() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                     {coreFeatures.map((feature, index) => (
                         // card
-                        <div key={index} className="border-2 border-border hover:border-primary/30 transition-colors group">
+                        <div key={index} className="border-2 border-border rounded-xl hover:border-primary/50 transition-colors group">
                             {/* card content */}
                             <div className="p-6 text-center">
                                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
