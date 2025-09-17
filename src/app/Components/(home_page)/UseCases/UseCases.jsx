@@ -4,11 +4,22 @@ import * as React from "react";
 import { Rocket, Building2, User, GraduationCap } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 // Utility function (clsx + tailwind-merge)
 function cn(...inputs) {
     return twMerge(clsx(inputs));
 }
+// Animation Variants
+const cardVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+};
+const listItemVariant = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 },
+};
+
 
 // Card Components
 function Card({ className, ...props }) {
@@ -93,66 +104,93 @@ export default function UseCases() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+                    >
                         Perfect for every team
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="text-lg text-muted-foreground max-w-2xl mx-auto"
+                    >
                         Whether you're a startup, enterprise, freelancer, or educational institution,
                         WorkStream adapts to your unique needs
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* Use Cases Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ staggerChildren: 0.2 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
                     {useCases.map((useCase, index) => (
-                        <Card
-                            key={index}
-                            className="border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg group"
-                        >
-                            <CardContent className="p-6">
-                                <div className="relative mb-6">
-                                    <div
-                                        className={`w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                        <motion.div key={index} variants={cardVariant} className="h-full">
+                            <Card className="h-full border-2 border-border hover:border-primary/30 transition-all duration-300 group flex flex-col">
+                                <CardContent className="p-6 flex flex-col justify-between h-full">
+                                    {/* Icon */}
+                                    <motion.div
+                                        whileHover={{ scale: 1.15, rotate: 5 }}
+                                        transition={{ duration: 0.3 }}
+                                        className={`w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center group-hover:shadow-lg mb-4`}
                                     >
                                         <useCase.icon className="w-6 h-6 text-white" />
+                                    </motion.div>
+
+                                    {/* Title & Description */}
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-foreground mb-2">{useCase.title}</h3>
+                                        <p className="text-muted-foreground mb-4">{useCase.description}</p>
                                     </div>
-                                </div>
 
-                                <h3 className="text-xl font-semibold text-foreground mb-2">
-                                    {useCase.title}
-                                </h3>
-                                <p className="text-muted-foreground mb-4">
-                                    {useCase.description}
-                                </p>
+                                    {/* Benefits */}
+                                    <ul className="space-y-2">
+                                        {useCase.benefits.map((benefit, idx) => (
+                                            <li key={idx} className="flex items-center text-sm text-foreground">
+                                                <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                                                {benefit}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
 
-                                <ul className="space-y-2">
-                                    {useCase.benefits.map((benefit, idx) => (
-                                        <li
-                                            key={idx}
-                                            className="flex items-center text-sm text-foreground"
-                                        >
-                                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </CardContent>
-                        </Card>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* CTA Section */}
                 <div className="text-center mt-16">
-                    <p className="text-lg text-muted-foreground mb-6">
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-lg text-muted-foreground mb-6"
+                    >
                         Ready to see how WorkStream can transform your workflow?
-                    </p>
+                    </motion.p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                        >
                             Start Free Trial
-                        </button>
-                        <button className="px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors">
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
                             Schedule Demo
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
             </div>
