@@ -46,6 +46,10 @@ export default function HomePage() {
       <div>
         <ReadyToTransform></ReadyToTransform>
       </div>
+      {/* Loved by teams worldwide */}
+      <div>
+        <Testimonials></Testimonials>
+      </div>
       {/* contact section  */}
       <div>
         <Contact></Contact>
