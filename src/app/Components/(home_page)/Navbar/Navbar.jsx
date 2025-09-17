@@ -49,12 +49,12 @@ export default function Navbar() {
             >
               Features
             </Link>
-            <a
-              href="#pricing"
+            <Link
+              href="/pricing"
               className="text-foreground hover:text-primary transition-colors"
             >
               Pricing
-            </a>
+            </Link>
             <Link
               href="solutions"
               className="text-foreground hover:text-primary transition-colors"
@@ -74,12 +74,13 @@ export default function Navbar() {
             <ThemeToggle />
 
             <Link href="/login">
-            <Button
-              variant="ghost"
-              className="text-foreground hover:text-primary"
-            >
-              Login
-            </Button></Link>
+              <Button
+                variant="ghost"
+                className="text-foreground hover:text-primary"
+              >
+                Login
+              </Button>
+            </Link>
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
               Sign Up
             </Button>
@@ -108,12 +109,12 @@ export default function Navbar() {
               >
                 Features
               </Link>
-              <a
-                href="#pricing"
+              <Link
+                href="/pricing"
                 className="block px-3 py-2 text-foreground hover:text-primary"
               >
                 Pricing
-              </a>
+              </Link>
               <Link
                 href="#solutions"
                 className="block px-3 py-2 text-foreground hover:text-primary"
@@ -132,9 +133,9 @@ export default function Navbar() {
                   <ThemeToggle />
                 </div>
                 <Link href="/login">
-                <Button variant="ghost" className="w-full">
-                  Login
-                </Button>
+                  <Button variant="ghost" className="w-full">
+                    Login
+                  </Button>
                 </Link>
                 <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                   Sign Up
