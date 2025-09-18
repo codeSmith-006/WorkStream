@@ -5,8 +5,8 @@ const footerLinks = {
   product: [
     { name: "Features", href: "#features" },
     { name: "Pricing", href: "#pricing" },
-    { name: "Integrations", href: "#" },
-    { name: "API", href: "#" },
+    // { name: "Integrations", href: "#" },
+    // { name: "API", href: "#" },
     { name: "Security", href: "#" },
   ],
   company: [
@@ -20,15 +20,15 @@ const footerLinks = {
     { name: "Documentation", href: "#" },
     { name: "Help Center", href: "#" },
     { name: "Community", href: "#" },
-    { name: "Templates", href: "#" },
-    { name: "Webinars", href: "#" },
+    // { name: "Templates", href: "#" },
+    // { name: "Webinars", href: "#" },
   ],
   legal: [
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
     { name: "Cookie Policy", href: "#" },
-    { name: "GDPR", href: "#" },
-    { name: "Status", href: "#" },
+    // { name: "GDPR", href: "#" },
+    // { name: "Status", href: "#" },
   ],
 };
 
@@ -142,14 +142,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-muted-foreground text-sm">
-              © 2025 WorkStream. All rights reserved.
-            </p>
-            
-          </div>
-        </div>
+       <div className="border-t border-border mt-12 pt-8">
+  <div className="flex justify-center items-center">
+    <p className="text-muted-foreground text-sm text-center">
+      © 2025 WorkStream. All rights reserved.
+    </p>
+  </div>
+</div>
+
       </div>
     </footer>
   );
