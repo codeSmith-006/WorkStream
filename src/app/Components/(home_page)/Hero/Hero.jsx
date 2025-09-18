@@ -5,6 +5,7 @@ import Button from "../UI/Button";
 import { PlayCircle, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { StarsBackground } from "../Animate-Ui/StarsBackground";
+import { Carousel } from "react-responsive-carousel";
 
 export function Hero() {
   const trustCompanies = [
@@ -151,11 +152,37 @@ export function Hero() {
                 </div>
               </div>
 
-              <ImageWithFallback
-                src="https://i.postimg.cc/QMjWCx8v/dashboard-preview.jpg"
-                alt="WorkStream Dashboard Preview"
-                className="w-full h-64 md:h-80 object-cover rounded-lg"
-              />
+              {/* Carousel Section */}
+              <Carousel
+                showThumbs={false}
+                showStatus={false}
+                infiniteLoop
+                autoPlay
+                interval={3000}
+                className="rounded-lg overflow-hidden"
+              >
+                <div>
+                  <img
+                    src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/a8a3a78d-9cf7-4d45-82f2-dd4ad51ba3d4.png"
+                    alt="Dashboard Preview"
+                    className="h-64 md:h-80 object-cover"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://blog.hubspot.com/hs-fs/hubfs/Doodle%20full%20width%20dashboard%20demo%20in%20dark%20skin.jpg?width=2250&name=Doodle%20full%20width%20dashboard%20demo%20in%20dark%20skin.jpg"
+                    alt="Slide 2"
+                    className="h-64 md:h-80 object-cover"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://cdn.shopify.com/app-store/listing_images/6347e264c8d3e24d7b2e8687c58213a8/desktop_screenshot/CLT6pamm8PICEAE=.png?height=1800&width=3200"
+                    alt="Slide 3"
+                    className="h-64 md:h-80 object-cover"
+                  />
+                </div>
+              </Carousel>
             </motion.div>
 
             {/* Floating badges */}
