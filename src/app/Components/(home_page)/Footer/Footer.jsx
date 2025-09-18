@@ -20,8 +20,7 @@ const footerLinks = {
     { name: "Documentation", href: "#" },
     { name: "Help Center", href: "help_center" },
     { name: "Community", href: "#" },
-    // { name: "Templates", href: "#" },
-    // { name: "Webinars", href: "#" },
+    
   ],
   legal: [
     { name: "Privacy", href: "#" },
