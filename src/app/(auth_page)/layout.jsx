@@ -1,6 +1,26 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import login1 from "../../assets/login1.json";
+import login2 from "../../assets/login2.json";
 
 export default function AuthLayout({ children }) {
+  const [showFirst, setShowFirst] = useState(true);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // start fade out
+      setTimeout(() => {
+        setShowFirst((prev) => !prev); // switch animation
+        setFade(true); // fade in
+      }, 500); // fade duration
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex h-screen bg-gray-900 text-white">
       {/* LEFT: Form area */}
@@ -10,18 +30,16 @@ export default function AuthLayout({ children }) {
         </div>
       </div>
 
-      {/* RIGHT: Static info/animation area */}
-      <div className="hidden md:flex md:w-1/2 relative overflow-hidden items-center justify-center p-12">
-        {/* gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-teal-500 to-blue-600 animate-pulse opacity-60" />
-
-        {/* overlay content */}
-        <div className="relative z-10 text-center space-y-4">
-          <h2 className="text-4xl font-extrabold">Welcome to WorkStream</h2>
-          <p className="text-lg text-gray-200 max-w-sm mx-auto">
-            Manage your projects, collaborate with your team, and stay
-            productive — all in one place.
-          </p>
+      {/* RIGHT: Animation area */}
+      <div className="hidden md:flex w-1/2 items-center justify-center relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-teal-500 to-blue-600 opacity-60 flex items-center justify-center p-6 transition-opacity duration-500">
+          <div className={`transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"} w-full h-full flex items-center justify-center`}>
+            {showFirst ? (
+              <Lottie animationData={login1} loop={true} />
+            ) : (
+              <Lottie animationData={login2} loop={true} />
+            )}
+          </div>
         </div>
       </div>
     </div>
