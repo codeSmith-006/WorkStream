@@ -127,12 +127,21 @@ export default function UseCases() {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ staggerChildren: 0.2 }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
                 >
                     {useCases.map((useCase, index) => (
-                        <motion.div key={index} variants={cardVariant} className="h-full">
+                        <motion.div
+                            key={index}
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            whileHover={{ scale: 1.05, y: -5 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+
+                            className="h-full">
                             <Card className="h-full border-2 border-border hover:border-primary/30 transition-all duration-300 group flex flex-col">
                                 <CardContent className="p-6 flex flex-col justify-between h-full">
                                     {/* Icon */}

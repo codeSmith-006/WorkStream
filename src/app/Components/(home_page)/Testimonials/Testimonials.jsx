@@ -1,50 +1,60 @@
-import { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import Button from '../UI/Button';
+"use client";
+
+import { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import Button from "../UI/Button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
     {
-        name: 'Sarah Chen',
-        role: 'Product Manager',
-        company: 'TechCorp',
-        image: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        name: "Sarah Chen",
+        role: "Product Manager",
+        company: "TechCorp",
+        image:
+            "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
         rating: 5,
-        quote: 'WorkStream transformed how our team collaborates. We\'ve increased our project delivery speed by 40% and everyone loves the intuitive interface.'
+        quote:
+            "WorkStream transformed how our team collaborates. We've increased our project delivery speed by 40% and everyone loves the intuitive interface.",
     },
     {
-        name: 'Michael Rodriguez',
-        role: 'Startup Founder',
-        company: 'StartupXYZ',
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+        name: "Michael Rodriguez",
+        role: "Startup Founder",
+        company: "StartupXYZ",
+        image:
+            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
         rating: 4,
-        quote: 'As a growing startup, we needed something that could scale with us. WorkStream\'s flexibility and powerful features have been game-changing for our remote team.'
+        quote:
+            "As a growing startup, we needed something that could scale with us. WorkStream's flexibility and powerful features have been game-changing for our remote team.",
     },
     {
-        name: 'Emily Johnson',
-        role: 'Department Head',
-        company: 'UniverCity',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+        name: "Emily Johnson",
+        role: "Department Head",
+        company: "UniverCity",
+        image:
+            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
         rating: 5,
-        quote: 'Our students and faculty love using WorkStream for collaborative projects. The learning curve is minimal and the results are outstanding.'
+        quote:
+            "Our students and faculty love using WorkStream for collaborative projects. The learning curve is minimal and the results are outstanding.",
     },
     {
-        name: 'David Kim',
-        role: 'Creative Director',
-        company: 'AgencyPro',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
+        name: "David Kim",
+        role: "Creative Director",
+        company: "AgencyPro",
+        image:
+            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
         rating: 3,
-        quote: 'Managing multiple client projects used to be chaotic. WorkStream brought order to our workflow and our clients love the transparency it provides.'
-    }
+        quote:
+            "Managing multiple client projects used to be chaotic. WorkStream brought order to our workflow and our clients love the transparency it provides.",
+    },
 ];
 
 const trustLogos = [
-    { name: 'TechCorp', logo: '🏢' },
-    { name: 'StartupXYZ', logo: '🚀' },
-    { name: 'UniverCity', logo: '🎓' },
-    { name: 'AgencyPro', logo: '🎨' },
-    { name: 'DataFlow', logo: '📊' },
-    { name: 'CloudTech', logo: '☁️' }
+    { name: "TechCorp", logo: "🏢" },
+    { name: "StartupXYZ", logo: "🚀" },
+    { name: "UniverCity", logo: "🎓" },
+    { name: "AgencyPro", logo: "🎨" },
+    { name: "DataFlow", logo: "📊" },
+    { name: "CloudTech", logo: "☁️" },
 ];
 
 export function Testimonials() {
@@ -74,14 +84,22 @@ export function Testimonials() {
     return (
         <section className="py-20 bg-card overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                {/* Header */}
+                <motion.div
+                    data-aos="fade-up"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.7 }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                         Loved by teams worldwide
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Join thousands of teams who have transformed their productivity with WorkStream
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Testimonial Carousel */}
                 <div className="relative max-w-4xl mx-auto mb-16">
@@ -93,13 +111,16 @@ export function Testimonials() {
                             exit={{ opacity: 0, x: -50 }}
                             transition={{ duration: 0.5 }}
                             className="border-2 border-border rounded-2xl shadow-lg"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
                         >
                             <div className="p-8 md:p-12 text-center">
                                 {/* Stars */}
                                 <motion.div
                                     className="flex justify-center mb-6"
                                     initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
+                                    whileInView={{ scale: 1 }}
+                                    viewport={{ once: false }}
                                     transition={{ duration: 0.5 }}
                                 >
                                     {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
@@ -113,7 +134,13 @@ export function Testimonials() {
                                 </blockquote>
 
                                 {/* Author */}
-                                <div className="flex items-center justify-center space-x-4">
+                                <motion.div
+                                    className="flex items-center justify-center space-x-4"
+                                    initial={{ y: 20, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: false }}
+                                    transition={{ duration: 0.5 }}
+                                >
                                     <img
                                         src={testimonials[currentIndex].image}
                                         alt={testimonials[currentIndex].name}
@@ -127,7 +154,7 @@ export function Testimonials() {
                                             {testimonials[currentIndex].role} at {testimonials[currentIndex].company}
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </motion.div>
                     </AnimatePresence>
@@ -167,22 +194,43 @@ export function Testimonials() {
                 </div>
 
                 {/* Trust Logos */}
-                <div className="border-t border-border pt-12">
+                <motion.div
+                    className="border-t border-border pt-12"
+                    data-aos="fade-up"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.5 }}
+                >
                     <p className="text-center text-muted-foreground mb-8">
                         Trusted by teams at these companies and many more
                     </p>
                     <div className="flex flex-wrap justify-center items-center gap-8">
                         {trustLogos.map((company, index) => (
-                            <div key={index} className="flex items-center space-x-2">
+                            <motion.div
+                                key={index}
+                                className="flex items-center space-x-2"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ delay: index * 0.1, duration: 0.5 }}
+                            >
                                 <span className="text-2xl">{company.logo}</span>
                                 <span className="text-lg font-semibold text-foreground">{company.name}</span>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center"
+                    data-aos="fade-up"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.5 }}
+                >
                     <div>
                         <div className="text-3xl font-bold text-primary mb-2">10,000+</div>
                         <div className="text-muted-foreground">Active Teams</div>
@@ -195,9 +243,8 @@ export function Testimonials() {
                         <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
                         <div className="text-muted-foreground">Uptime</div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
-
     );
 }
