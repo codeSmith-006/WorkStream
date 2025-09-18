@@ -25,7 +25,7 @@ export function Hero() {
       {/* Stars Background */}
       <StarsBackground className="absolute inset-0 z-0" />
 
-      <div className="relative z-10 max-w-7xl mx-auto py-22   px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto py-22 px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           initial="hidden"
@@ -39,7 +39,8 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-8 md:text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight lg:text-left"
             >
@@ -49,7 +50,8 @@ export function Hero() {
 
             <motion.p
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 md:text-center lg:text-left"
             >
@@ -62,13 +64,11 @@ export function Hero() {
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
                   className="bg-primary text-primary-foreground px-8 py-6 text-lg flex items-center justify-center"
@@ -78,10 +78,7 @@ export function Hero() {
                 </Button>
               </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   variant="outline"
                   size="lg"
@@ -97,7 +94,8 @@ export function Hero() {
             <motion.div
               className="overflow-hidden w-full mt-8"
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
               transition={{ delay: 1, duration: 0.8 }}
             >
               <p className="text-sm text-muted-foreground mb-4 text-center lg:text-left">
@@ -134,7 +132,8 @@ export function Hero() {
           <div className="flex justify-center lg:justify-end relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
               transition={{ duration: 1 }}
               whileHover={{ scale: 1.02, rotate: 0.5 }}
               className="relative bg-card rounded-2xl shadow-2xl p-4 border border-border"
