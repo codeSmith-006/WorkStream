@@ -5,6 +5,8 @@ import { CheckCircle } from "lucide-react";
 import { Carousel } from "react-responsive-carousel";
 export default function Partners() {
   return (
+
+    
     <section className="relative bg-[#0d0b1f] py-20 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Top Section */}
