@@ -17,7 +17,7 @@ export function Hero() {
     "AlphaTeam",
     "NextGen",
     "ByteMasters",
-    "CodeCrafters"
+    "CodeCrafters",
   ];
 
   return (
@@ -32,7 +32,7 @@ export function Hero() {
           animate="visible"
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.3 } }
+            visible: { transition: { staggerChildren: 0.3 } },
           }}
         >
           {/* Left Side */}
@@ -53,7 +53,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 md:text-center lg:text-left"
             >
-              WorkStream helps teams plan, track, and collaborate on projects efficiently with task management, timelines, and real-time communication.
+              WorkStream helps teams plan, track, and collaborate on projects
+              efficiently with task management, timelines, and real-time
+              communication.
             </motion.p>
 
             {/* Buttons */}
@@ -63,15 +65,28 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" className="bg-primary text-primary-foreground px-8 py-6 text-lg flex items-center justify-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground px-8 py-6 text-lg flex items-center justify-center"
+                >
                   Get Started Free
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="outline" size="lg" className="border-2 border-primary text-primary px-8 py-6 text-lg flex items-center justify-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-primary text-primary px-8 py-6 text-lg flex items-center justify-center"
+                >
                   <PlayCircle className="mr-2 w-5 h-5" />
                   Book a Demo
                 </Button>
@@ -98,12 +113,15 @@ export function Hero() {
                       repeat: Infinity,
                       repeatType: "loop",
                       duration: 20,
-                      ease: "linear"
-                    }
+                      ease: "linear",
+                    },
                   }}
                 >
                   {trustCompanies.concat(trustCompanies).map((name, i) => (
-                    <div key={i} className="text-lg font-semibold text-foreground">
+                    <div
+                      key={i}
+                      className="text-lg font-semibold text-foreground"
+                    >
                       {name}
                     </div>
                   ))}
