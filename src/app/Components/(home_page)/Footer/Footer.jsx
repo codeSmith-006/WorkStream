@@ -3,22 +3,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Waves, Linkedin, Github, Mail } from "lucide-react";
 const footerLinks = {
   product: [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Features", href: "features" },
+    { name: "Pricing", href: "pricing" },
     // { name: "Integrations", href: "#" },
     // { name: "API", href: "#" },
     { name: "Security", href: "#" },
   ],
   company: [
-    { name: "About", href: "#about" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Partners", href: "#" },
+    { name: "About", href: "about" },
+    // { name: "Blog", href: "#" },
+    // { name: "Careers", href: "#" },
+    { name: "Solutions", href: "solutions" },
+    { name: "Partners", href: "partners" },
   ],
   resources: [
     { name: "Documentation", href: "#" },
-    { name: "Help Center", href: "#" },
+    { name: "Help Center", href: "help_center" },
     { name: "Community", href: "#" },
     // { name: "Templates", href: "#" },
     // { name: "Webinars", href: "#" },
