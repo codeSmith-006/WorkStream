@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "../UI/Button";
 import { motion, AnimatePresence } from "framer-motion";
+import CountUp from "react-countup";
 
 const testimonials = [
     {
@@ -232,15 +233,15 @@ export function Testimonials() {
                     transition={{ duration: 0.5 }}
                 >
                     <div>
-                        <div className="text-3xl font-bold text-primary mb-2">10,000+</div>
+                        <div className="text-3xl font-bold text-primary mb-2"><CountUp start={6000} end={10000} duration={5}></CountUp>+</div>
                         <div className="text-muted-foreground">Active Teams</div>
                     </div>
                     <div>
-                        <div className="text-3xl font-bold text-primary mb-2">4.9/5</div>
+                        <div className="text-3xl font-bold text-primary mb-2"><CountUp start={1} end={4} duration={5}></CountUp>/5</div>
                         <div className="text-muted-foreground">User Rating</div>
                     </div>
                     <div>
-                        <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
+                        <div className="text-3xl font-bold text-primary mb-2"><CountUp start={2} end={10} duration={5}></CountUp>%</div>
                         <div className="text-muted-foreground">Uptime</div>
                     </div>
                 </motion.div>
