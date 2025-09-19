@@ -34,10 +34,6 @@ export default function HomePage() {
       <div>
         <FaqSection />
       </div>
-
-      <div>
-        <Testimonials></Testimonials>
-      </div>
       {/* pricing */}
       <div>
         <Pricing></Pricing>
