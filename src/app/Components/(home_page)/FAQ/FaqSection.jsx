@@ -45,7 +45,7 @@ const faqs = [
   },
 ];
 
-export default function FaqSection() {
+export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -53,18 +53,18 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-16 text-center">
+    <section className="max-w-7xl mx-auto my-12 px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4 ">
+      <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border-1 cursor-pointer border-border rounded-2xl shadow-sm "
+            className="border cursor-pointer border-gray-200 rounded-2xl shadow-sm"
           >
             <button
-              className="flex justify-between cursor-pointer items-center w-full p-4 text-left font-medium"
+              className="flex justify-between items-center w-full p-4 text-left font-medium"
               onClick={() => toggleFAQ(index)}
             >
               <span>{faq.question}</span>
@@ -74,22 +74,11 @@ export default function FaqSection() {
                 <ChevronDown className="h-5 w-5" />
               )}
             </button>
-            {/*Smooth Expand/collapse */}
-            <div
-              className={`overflow-hidden transition-all duration-800 ease-in-out cursor-pointer ${
-                openIndex === index
-                  ? "max-h-40 opacity-100"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
+            {openIndex === index && (
               <div className="px-4 pb-4 text-muted-foreground">
                 {faq.answer}
               </div>
-            </div>
-
-            {/* {openIndex === index && (
-                            <div className="px-4 pb-4  text-muted-foreground">{faq.answer}</div>
-                        )} */}
+            )}
           </div>
         ))}
       </div>
