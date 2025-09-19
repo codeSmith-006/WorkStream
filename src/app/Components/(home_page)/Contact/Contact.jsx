@@ -29,7 +29,6 @@ const Contact = () => {
 
   return (
     <section className="py-20 bg-muted/30 dark:bg-muted/20 transition-colors duration-300">
-      <Toaster position="top-right" reverseOrder={false} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div

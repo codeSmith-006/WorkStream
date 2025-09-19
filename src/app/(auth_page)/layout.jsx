@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import login1 from "../../assets/login1.json";
+import register from "../../assets/register.json";
 import login2 from "../../assets/login2.json";
 
 export default function AuthLayout({ children }) {
@@ -24,7 +24,7 @@ export default function AuthLayout({ children }) {
   return (
     <div className="flex h-screen bg-gray-900 text-white">
       {/* LEFT: Form area */}
-      <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12">
+      <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12 ">
         <div className="w-full max-w-md bg-gray-800/70 backdrop-blur-md rounded-2xl p-8 shadow-xl">
           {children}
         </div>
@@ -35,7 +35,7 @@ export default function AuthLayout({ children }) {
         <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-teal-500 to-blue-600 opacity-60 flex items-center justify-center p-6 transition-opacity duration-500">
           <div className={`transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"} w-full h-full flex items-center justify-center`}>
             {showFirst ? (
-              <Lottie animationData={login1} loop={true} />
+              <Lottie animationData={register} loop={true} />
             ) : (
               <Lottie animationData={login2} loop={true} />
             )}
