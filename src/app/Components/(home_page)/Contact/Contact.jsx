@@ -48,17 +48,17 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Left Side */}
           <div
-            className="p-8 space-y-6 border border-border shadow-md rounded-[3.75rem_0.375rem_0.375rem_0.375rem] bg-background transition-colors"
+            className="p-8 border border-border shadow-md rounded-[3.75rem_0.375rem_0.375rem_0.375rem] bg-background transition-colors"
             data-aos="fade-right"
             data-aos-delay="200"
           >
             {/* Animation */}
-            <div className="w-full h-64 md:h-80 lg:h-96">
-              <Lottie animationData={contactAnimation} loop={true} />
+            <div className="">
+              <Lottie className=" w-full h-100" animationData={contactAnimation} loop={true} />
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-4 text-foreground">
+            <div className="space-y-4 text-foreground relative mb-0">
               {/* Email */}
               <div className="flex items-center gap-3" data-aos="fade-up" data-aos-delay="300">
                 <div className="p-3 bg-primary/20 text-primary rounded-xl">
@@ -87,18 +87,18 @@ const Contact = () => {
 
           {/* Right Side - Form */}
           <div
-            className="p-8 rounded-md shadow-lg border border-border bg-background transition-colors grid"
+            className="p-5 rounded-md shadow-lg border border-border bg-background transition-colors grid"
             data-aos="fade-left"
             data-aos-delay="300"
           >
-            <h2 className="text-2xl font-bold mb-6 text-foreground">Send a Message</h2>
-            <p className="text-sm text-muted-foreground mb-6">
+            <h2 className="text-2xl font-bold  text-foreground">Send a Message</h2>
+            <p className="text-sm text-muted-foreground">
               If you would like to discuss anything related to payment, account,
               licensing, partnerships, or have pre-sales questions, you’re at
               the right place.
             </p>
 
-            <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+            <form className="space-y-2" onSubmit={handleSubmit(onSubmit)}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm text-muted-foreground block mb-2">
