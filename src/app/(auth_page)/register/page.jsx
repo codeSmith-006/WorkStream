@@ -37,7 +37,7 @@ export default function LoginPage() {
               <ArrowLeft />
 
             </Link>
-            <h1 className='text-5xl font-semibold'>Register !</h1>
+            <h1 className='text-4xl font-semibold'>Register !</h1>
 
             {/* Name Field */}
             <label className="label">Name</label>

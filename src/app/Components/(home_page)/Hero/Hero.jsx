@@ -70,9 +70,10 @@ export function Hero() {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                {/* Get start Button */}
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground px-8 py-6 text-lg flex items-center justify-center"
+                  className="bg-primary text-primary-foreground lg:px-8 lg:py-6 text-lg flex items-center justify-center md:px-8 md:py-6 px-4 py-3 "
                 >
                   Get Started Free
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -80,10 +81,11 @@ export function Hero() {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                {/* Book a Demo button */}
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-primary text-primary px-8 py-6 text-lg flex items-center justify-center"
+                  className="border-2 border-primary text-primary lg:px-8 lg:py-6 md:px-8 md:py-6 text-lg flex items-center justify-center px-6 py-3"
                 >
                   <PlayCircle className="mr-2 w-5 h-5" />
                   Book a Demo
@@ -198,7 +200,7 @@ export function Hero() {
               transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
               className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg"
             >
-              📊 Real-time Analytics
+               Real-time Analytics
             </motion.div>
           </div>
         </motion.div>
