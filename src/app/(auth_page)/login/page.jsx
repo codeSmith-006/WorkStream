@@ -1,12 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { ArrowLeft } from "lucide-react";
 
 export default function LoginPage() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const [loginError, setLoginError] = useState("");
 
   const onSubmit = (data) => {
     console.log("Submitted user:", data); // <-- console e input show hobe
@@ -31,17 +30,28 @@ export default function LoginPage() {
       <div className='card-body'>
         <form onSubmit={handleSubmit(onSubmit)}>
           <fieldset className="fieldset">
-            <Link href="/"><ArrowLeft /></Link>
+            <Link href="/">
+            
+              <ArrowLeft />
+            
+            </Link>
             <h1 className='text-5xl font-semibold'>Login !</h1>
 
             <label className="label">Email</label>
             <input
               type="email"
               autoComplete="off"
-              {...register('email')}
-              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              {...register('email', {
+                required: true,
+              })}
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#438af7]"
               placeholder="Email"
             />
+            {errors.email?.type === "required" && (
+              <p role='alert' className='text-red-600'>
+                Email is required
+              </p>
+            )}
 
             <label className="label">Password</label>
             <input
@@ -51,7 +61,7 @@ export default function LoginPage() {
                 required: true,
                 minLength: 6
               })}
-              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#438af7]"
               placeholder="Password"
             />
 
@@ -67,17 +77,29 @@ export default function LoginPage() {
               </p>
             )}
 
-            <div><a className="link link-hover">Forgot password?</a></div>
+            <div><a className="link link-hover flex justify-end ">Forgot password?</a></div>
 
-            {/* <button className="btn bg-[#caeb66] text-black font-bold w-full mt-4" disabled={loading}>
-              {loading ? "Logging in..." : "Login"}
-            </button> */}
+            <button
+              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium text-lg"
+
+            // here it is used login button loadign for user better experience
+
+            // disabled={loading}
+            >
+              {/* {loading ? "Logging in..." : "Login"} */}
+
+              Sign In
+            </button>
           </fieldset>
 
-          <p>
+          <p className="text-lg text-center">
             <small>
               Don't have an account?
-              <Link href='/register' className='btn-link text-blue-700'> Register</Link>
+              <Link
+                href='/register'
+                className='btn-link text-blue-500 link-hover ml-1'
+              >
+                Register</Link>
             </small>
           </p>
         </form>
