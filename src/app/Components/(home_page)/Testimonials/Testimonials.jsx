@@ -206,20 +206,29 @@ export function Testimonials() {
                     <p className="text-center text-muted-foreground mb-8">
                         Trusted by teams at these companies and many more
                     </p>
-                    <div className="flex flex-wrap justify-center items-center gap-8">
-                        {trustLogos.map((company, index) => (
-                            <motion.div
-                                key={index}
-                                className="flex items-center space-x-2"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                transition={{ delay: index * 0.1, duration: 0.5 }}
-                            >
-                                <span className="text-2xl">{company.logo}</span>
-                                <span className="text-lg font-semibold text-foreground">{company.name}</span>
-                            </motion.div>
-                        ))}
+                    <div className="flex flex-wrap justify-center items-center gap-8 overflow-hidden relative w-1/2 mx-auto">
+                        <motion.div
+                            className="flex gap-12 whitespace-nowrap"
+                            animate={{ x: ["0%", "-50%"] }}
+                            transition={{
+                                x: {
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 30,
+                                    ease: "linear",
+                                },
+                            }}
+                        >
+                            {trustLogos.map((company, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-center space-x-2"
+                                >
+                                    <span className="text-2xl">{company.logo}</span>
+                                    <span className="text-lg font-semibold text-foreground">{company.name}</span>
+                                </div>
+                            ))}
+                        </motion.div>
                     </div>
                 </motion.div>
 
