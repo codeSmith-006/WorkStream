@@ -24,7 +24,7 @@ export default function AuthLayout({ children }) {
   return (
     <div className="flex h-screen bg-gray-900 text-white">
       {/* LEFT: Form area */}
-      <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12">
+      <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12 ">
         <div className="w-full max-w-md bg-gray-800/70 backdrop-blur-md rounded-2xl p-8 shadow-xl">
           {children}
         </div>
