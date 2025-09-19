@@ -3,32 +3,31 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Waves, Linkedin, Github, Mail } from "lucide-react";
 const footerLinks = {
   product: [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Integrations", href: "#" },
-    { name: "API", href: "#" },
+    { name: "Features", href: "features" },
+    { name: "Pricing", href: "pricing" },
+    // { name: "Integrations", href: "#" },
+    // { name: "API", href: "#" },
     { name: "Security", href: "#" },
   ],
   company: [
-    { name: "About", href: "#about" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Partners", href: "#" },
+    { name: "About", href: "about" },
+    // { name: "Blog", href: "#" },
+    // { name: "Careers", href: "#" },
+    { name: "Solutions", href: "solutions" },
+    { name: "Partners", href: "partners" },
   ],
   resources: [
     { name: "Documentation", href: "#" },
-    { name: "Help Center", href: "#" },
+    { name: "Help Center", href: "help_center" },
     { name: "Community", href: "#" },
-    { name: "Templates", href: "#" },
-    { name: "Webinars", href: "#" },
+    
   ],
   legal: [
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
     { name: "Cookie Policy", href: "#" },
-    { name: "GDPR", href: "#" },
-    { name: "Status", href: "#" },
+    // { name: "GDPR", href: "#" },
+    // { name: "Status", href: "#" },
   ],
 };
 
@@ -41,6 +40,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
+
+    
     <footer className="bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -142,14 +143,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-muted-foreground text-sm">
-              © 2025 WorkStream. All rights reserved.
-            </p>
-            
-          </div>
-        </div>
+       <div className="border-t border-border mt-12 pt-8">
+  <div className="flex justify-center items-center">
+    <p className="text-muted-foreground text-sm text-center">
+      © 2025 WorkStream. All rights reserved.
+    </p>
+  </div>
+</div>
+
       </div>
     </footer>
   );
