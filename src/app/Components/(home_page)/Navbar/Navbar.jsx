@@ -178,10 +178,10 @@ export default function Navbar() {
       ),
     },
     {
-      key: "help-center",
+      key: "help_center",
       label: (
         <Link
-          href="/help-center"
+          href="/help_center"
           className="block px-3 py-2 text-foreground hover:text-primary transition-all duration-300 group"
         >
           <div className="flex items-start space-x-3">
@@ -529,7 +529,7 @@ export default function Navbar() {
                         </div>
                       </Link>
                       <Link
-                        href="/help-center"
+                        href="/help_center"
                         className="block px-4 py-3 rounded-lg hover:bg-muted/30 transition-all duration-300 group"
                       >
                         <div className="flex items-center space-x-3">
