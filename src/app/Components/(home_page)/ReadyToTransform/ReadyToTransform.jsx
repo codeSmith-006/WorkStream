@@ -95,11 +95,12 @@ export function ReadyToTransform() {
             </motion.button>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(255,255,255,0.3)" }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 rounded text-lg font-semibold"
+              className="border border-white flex items-center lg:h-18 h-18 px-3 rounded text-white lg:px-8 lg:py-6 text-lg font-semibold group shadow-lg"
             >
               Schedule Demo
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </motion.div>
 
