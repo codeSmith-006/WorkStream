@@ -15,6 +15,7 @@ import Contact from "../Components/(home_page)/Contact/Contact";
 import SecuritySection from "./security/page";
 import FAQSection from "../Components/(home_page)/FAQ/FaqSection";
 // import FaqSection from "../Components/(home_page)/FAQ/FAQSection";
+import FAQSection from "../Components/(home_page)/FAQ/FAQSection";
 
 // here we'll have the content of the home page
 export default function HomePage() {
